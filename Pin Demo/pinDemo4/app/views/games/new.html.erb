@@ -1,0 +1,28 @@
+<h1>This is where the game is initialised</h1>
+
+<%= form_with scope: :game, url: games_path, local: true do |form| %>
+
+  <p>
+    <%= form.label :Title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :'Theme (colour)' %><br>
+    <%= form.text_field :colour %>
+  </p>
+
+  <p>
+    <%= form.label :Question %><br>
+    <%= form.text_area :question %>
+  </p>
+
+  <p>
+    <%= form.label :'Number of Chests' %><br>
+    <%= form.text_area :numOfChests %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

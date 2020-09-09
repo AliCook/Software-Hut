@@ -1,0 +1,20 @@
+%head
+  = javascript_include_tag "application"
+  = javascript_include_tag "pinscript"
+  %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css", :rel => "stylesheet"}/
+  = stylesheet_link_tag "pincss.css", media: :all
+
+  = favicon_link_tag "favicon.ico"
+
+
+  %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+  %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
+  %title Escape - The Experience
+  %meta{:content => "Escape room", :name => "description"}/
+%body
+  = image_tag "canyouescape.png", :class => "hidden", :id => "logo2", :align => "middle"
+  #darkoverlay
+
+  = render 'form'
+
+  #doorclosed

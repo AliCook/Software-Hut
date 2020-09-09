@@ -1,0 +1,12 @@
+%head
+  = stylesheet_link_tag "lobby"
+  = favicon_link_tag "favicon.ico"
+  = action_cable_meta_tag
+
+  %title Prepare to Escape
+%body{:class => "#{@theme}"}
+  =image_tag "logo.png", :id => "escape"
+  .teambox
+    - @teams.each do |team|
+      .box
+        .teamname #{team.name}

@@ -1,0 +1,14 @@
+%h1 Editing game
+- if @question_len == 1
+  %h2= "This game has #{@question_len} question"
+- elsif @question_len < 8
+  %h2= "This game has #{@question_len} questions"
+- else
+  %h2= "This game has reached the maximum of 8 questions"
+
+
+= render 'form'
+
+= link_to 'Show', @game
+\|
+= link_to 'Back', games_path

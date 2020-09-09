@@ -1,0 +1,6 @@
+<h1>Page where the students enter the pin</h1>
+
+<%= form_tag search_index_path, method: :get do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Enter Game Pin..." %>
+  <%= submit_tag "Join", name: nil %>
+<% end %>

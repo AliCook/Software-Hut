@@ -1,0 +1,19 @@
+%h1 Listing past games
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Date
+      %th Show
+      %th Destroy
+
+  %tbody
+    - @live_games.each do |live_game|
+      %tr
+        %td= live_game.name
+        %td= "Started at: #{live_game.created_at}"
+        %td= link_to 'Show', end_game_path(live_game.id)
+        %td= link_to 'Destroy', live_game, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br

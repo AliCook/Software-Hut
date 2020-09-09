@@ -1,0 +1,10 @@
+%head
+  = javascript_include_tag "application"
+  = javascript_include_tag "lock"
+  = javascript_include_tag "lock2"
+  %title Lock
+
+%body
+  %h3 #{@question.question}
+  %canvas#canvas{:height => "800", :width => "800"}
+  %br/

@@ -1,0 +1,11 @@
+development: &defaults
+  adapter: postgresql
+  min_messages: warning
+  host: epi-stu-hut-dev-dbs2.shef.ac.uk
+  username: acb17tw
+  password: '730c2a605626e9f1aa693f98ccbd8862'
+  database: acb17tw_dev1
+
+test:
+  <<: *defaults
+  database: acb17tw_test

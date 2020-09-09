@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  colour: MyString
+  question: MyString
+  numOfChests: 1
+  pin: MyString
+
+two:
+  title: MyString
+  colour: MyString
+  question: MyString
+  numOfChests: 1
+  pin: MyString

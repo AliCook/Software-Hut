@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: escape-room_dev
+  host: localhost
+  min_messages: warning
+  username:
+
+test:
+  adapter: postgresql
+  database: escape-room_test
+  host: localhost
+  min_messages: warning
+  username:

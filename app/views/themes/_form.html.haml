@@ -1,0 +1,18 @@
+-# frozen_string_literal: true
+= simple_form_for(@theme) do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  .form-inputs
+    = f.input :name
+
+    = f.input :intro_narrative
+
+    = f.input :midgame_narrative
+
+    = f.input :endgame_narrative_escaped
+
+    = f.input :endgame_narrative_trapped
+
+  .form-actions
+    = f.button :submit

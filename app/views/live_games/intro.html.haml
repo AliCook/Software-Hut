@@ -1,0 +1,13 @@
+%head
+	= stylesheet_link_tag "introcss"
+	%meta{:content => "initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no", :name => "viewport"}/
+	%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"}
+	= favicon_link_tag "favicon.ico"
+	%title
+		Escape the #{@theme.name}
+	%meta{:content => "Escape room", :name => "description"}/
+
+%body{:class => "#{@theme.name}"}
+	%div.blur.blurmove{:class => "#{@theme.name}"}
+	.narrative #{@theme.intro_narrative}
+	= link_to "Click Here To Continue", play_game_path(@live_game.id, :team_id => @team_id), id: "return"
